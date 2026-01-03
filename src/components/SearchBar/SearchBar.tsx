@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { useAppDispatch } from "../redux/hooks";
-import { setSearch } from "../redux/slices/Product/productsSlice";
+import { useAppDispatch } from "../../redux/hooks";
+import { setSearch } from "../../redux/slices/Product/productsSlice";
 import { Search } from "lucide-react";
 
 export const SearchBar = () => {

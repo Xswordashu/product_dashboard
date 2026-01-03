@@ -1,11 +1,11 @@
-import { useGetProductsQuery } from "../redux/services/productsApi";
-import { ProductCard } from "../components/ProductCard";
-import { useAppSelector } from "../redux/hooks";
-import { filteredProductsSelector } from "../redux/selectors/selectors";
-import { SearchBar } from "../components/SearchBar";
-import { Filters } from "../components/Filters";
+import { useGetProductsQuery } from "../../redux/services/productsApi";
+import { ProductCard } from "../../components/ProductCard";
+import { useAppSelector } from "../../redux/hooks";
+import { filteredProductsSelector } from "../../redux/selectors/selectors";
+import { SearchBar } from "../../components/SearchBar";
+import { Filters } from "../../components/Filters";
 import { Search } from "lucide-react";
-import { Loader } from "../components/Loader";
+import { Loader } from "../../components/Loader";
 
 export default function ProductsPage() {
   const { isLoading } = useGetProductsQuery();

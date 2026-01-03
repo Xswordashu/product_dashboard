@@ -38,6 +38,30 @@ it("testing selectors output with category filter", ()=>{
     }
 
     const result   = filteredProductsSelector.resultFunc(products, filtersState);
-    console.log("filtered by category:", result);
+    // console.log("filtered by category:", result);
     expect(result).toEqual([{id:3, title:"Nike Shoes", category:"fashion", price:199}]);
+})
+
+it("testing selectors output with sort filter", ()=>{
+
+    const products = [
+        {id:1, title:"Apple iPhone", category:"electronics", price:999},
+        {id:2, title:"Samsung Galaxy", category:"electronics", price:899},
+        {id:3, title:"Nike Shoes", category:"fashion", price:199},
+    ];
+
+    const filtersState = {
+        search: "",
+        category: "all",
+        sort: "asc" as "asc" | "desc",
+    }
+
+    const result   = filteredProductsSelector.resultFunc(products, filtersState);
+    // console.log("filtered by sort:", result);
+    expect(result).toEqual([
+        {id:3, title:"Nike Shoes", category:"fashion", price:199},
+        {id:2, title:"Samsung Galaxy", category:"electronics", price:899},
+        {id:1, title:"Apple iPhone", category:"electronics", price:999},
+        
+    ]);
 })

@@ -1,6 +1,6 @@
 import { ChevronDown } from "lucide-react";
-import { useAppDispatch } from "../redux/hooks";
-import { setCategory, setSort } from "../redux/slices/Product/productsSlice";
+import { useAppDispatch } from "../../redux/hooks";
+import { setCategory, setSort } from "../../redux/slices/Product/productsSlice";
 
 export const Filters = () => {
   const dispatch = useAppDispatch();

@@ -3,7 +3,7 @@ import { ProductCard } from "../../components/ProductCard";
 import { useAppSelector } from "../../redux/hooks";
 import { filteredProductsSelector } from "../../redux/selectors/selectors";
 import { SearchBar } from "../../components/SearchBar/SearchBar";
-import { Filters } from "../../components/Filters";
+import { Filters } from "../../components/Filters/Filters";
 import { Search } from "lucide-react";
 import { Loader } from "../../components/Loader";
 

@@ -5,6 +5,7 @@ export const handlers = [
     return HttpResponse.json([
       { id: 1, title: "Laptop", category: "electronics", price: 1000 },
       { id: 2, title: "Phone", category: "electronics", price: 500 },
+      { id: 3, title: "Necklace", category: "jewelery", price: 200 },
     ]);
   }),
 ];

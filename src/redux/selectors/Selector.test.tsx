@@ -1,5 +1,6 @@
 import { expect, it } from "vitest";
 import { filteredProductsSelector } from "./selectors";
+import type { Product } from "../../types/Product";
 
 
 
@@ -17,7 +18,7 @@ it("testing selectors output with search filter", ()=>{
         sort: "asc" as "asc" | "desc",
     }
 
-    const result   = filteredProductsSelector.resultFunc(products, filtersState);
+    const result   = filteredProductsSelector.resultFunc(products as Product[], filtersState);
     // console.log(result);
     expect(result).toEqual([{id:1, title:"Apple iPhone", category:"electronics", price:999}]);
 })
@@ -37,7 +38,7 @@ it("testing selectors output with category filter", ()=>{
         sort: "asc" as "asc" | "desc",
     }
 
-    const result   = filteredProductsSelector.resultFunc(products, filtersState);
+    const result   = filteredProductsSelector.resultFunc(products as Product[], filtersState);
     // console.log("filtered by category:", result);
     expect(result).toEqual([{id:3, title:"Nike Shoes", category:"fashion", price:199}]);
 })
@@ -56,7 +57,7 @@ it("testing selectors output with sort filter", ()=>{
         sort: "asc" as "asc" | "desc",
     }
 
-    const result   = filteredProductsSelector.resultFunc(products, filtersState);
+    const result   = filteredProductsSelector.resultFunc(products as Product[], filtersState);
     // console.log("filtered by sort:", result);
     expect(result).toEqual([
         {id:3, title:"Nike Shoes", category:"fashion", price:199},
